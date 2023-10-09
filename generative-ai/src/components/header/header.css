@@ -1,0 +1,18 @@
+.header{
+  display: flex;
+  align-items: center; justify-content: space-between;
+  width: 100vw;
+  background-color: #F7DC16;
+  z-index: 99;
+}
+.logo{
+  height: 50px;
+  margin: 5px 43vw 5px 0px;
+}
+.bars{
+  color: white; background-color: #1D3C85;
+  padding: 6px;
+  height: 1.5rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
