@@ -40,3 +40,10 @@ input:focus{
   margin-right: 15px;
   height: 20px;
 }
+.newHTML{
+  position: absolute;
+}
+.output{
+  position: absolute;
+  margin-top: 20vh;
+}

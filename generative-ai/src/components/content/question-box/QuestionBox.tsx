@@ -4,12 +4,13 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './questionBox.css';
 import { useQuestionBox } from './QuestionBoxFunctions'; // Importe as funções
 
-
 export const QuestionBox = () => {
 
   const {
     isParagraphVisible,
     inputValue,
+    displayedElement,
+    displayedElementAI,
     handleInputChange,
     handleMessageSubmit,
   } = useQuestionBox();
@@ -23,12 +24,18 @@ export const QuestionBox = () => {
 
 
   return (
-    <div className="box-size">
-      {isParagraphVisible && <p>Envie uma mensagem</p>}
-      <div className="textarea">
-        <input type="text" onChange={handleInputChange} value={inputValue} onKeyDown={handleKeyPress}/>
-        <FontAwesomeIcon icon={faPaperPlane} style={{ color: '#ffffff' }} className='input-icon' onClick={handleMessageSubmit}/>
+    <>
+      <div>
+        {displayedElement}
+        {displayedElementAI}
       </div>
-    </div>
+      <div className="box-size">
+        {isParagraphVisible && <p>Envie uma mensagem</p>}
+        <div className="textarea">
+          <input type="text" onChange={handleInputChange} value={inputValue} onKeyDown={handleKeyPress}/>
+          <FontAwesomeIcon icon={faPaperPlane} style={{ color: '#ffffff' }} className='input-icon' onClick={handleMessageSubmit}/>
+        </div>
+      </div>
+    </>
   );
 };
