@@ -3,13 +3,18 @@
   font-family: 'Roboto', sans-serif;
 }
 .box-size{
+  position: fixed;
+  left: 35vw;
+  top: 10vh;
   display: flex;
   margin-top: 78vh;
-  background-color: #808080; opacity: 0.7;
+  background-color: #808080; opacity: 1;
   width: 50vw; height: 8vh;
   align-items: center;
   color: white;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  backdrop-filter: blur(10px);
 }
 p{
   margin-left: 8px;
@@ -40,10 +45,22 @@ input:focus{
   margin-right: 15px;
   height: 20px;
 }
-.newHTML{
-  position: absolute;
+.messages{
+  display: flex; 
+  flex-direction: column;
+  margin-top: 5vh;
+  height: auto;
 }
-.output{
-  position: absolute;
-  margin-top: 20vh;
+.message-output-message, .message-input-message{
+  width: 50vw;
+  height: auto;
+  text-align: justify;
+  word-wrap: break-word;
 }
+.message-output-message{
+  margin-bottom: 20vh;
+}
+.message-input-message{
+  margin-bottom: 10vh;
+}
+
